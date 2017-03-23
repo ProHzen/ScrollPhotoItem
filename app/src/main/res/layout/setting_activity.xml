@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/ll_parent"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <!--<com.eebbk.open.scrollphotoitem.TopSettingView.SettingLayout-->
+        <!--android:id="@+id/layout_setting"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:background="#33000000"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/_107px"-->
+        <!--android:paddingRight="@dimen/_42px">-->
+
+    <!--</com.eebbk.open.scrollphotoitem.TopSettingView.SettingLayout>-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_add_line_two"
+            android:text="增加一行 个数为两个"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="增加一行 个数为三个"
+            android:id="@+id/btn_add_line_three"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="增加一行 个数为四个"
+            android:id="@+id/btn_add_line_four"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <com.eebbk.open.scrollphotoitem.TopSettingView.SettingParentLayout
+        android:background="@color/colorPrimaryDark"
+        android:paddingRight="@dimen/_45px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.eebbk.open.scrollphotoitem.TopSettingView.SettingParentLayout>
+
+    <!--<com.eebbk.open.scrollphotoitem.EffectPanelManager.EffectRecycleView-->
+        <!--android:id="@+id/rv_effect"-->
+        <!--android:background="#33000000"-->
+        <!--android:scrollbars="none"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+    <!--</com.eebbk.open.scrollphotoitem.EffectPanelManager.EffectRecycleView>-->
+</LinearLayout>

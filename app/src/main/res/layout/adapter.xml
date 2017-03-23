@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.eebbk.open.scrollphotoitem.ModeScrollLineaLayout.MainActivity">
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="延时摄影"
+        android:textColor="#000000"
+        android:id="@+id/tv_adapter"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+
+</RelativeLayout>
