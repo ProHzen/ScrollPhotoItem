@@ -27,6 +27,7 @@ public class SceneAnimationActivity extends AppCompatActivity{
 
     private boolean isSecond = true;
     private Button mGo;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,15 +42,14 @@ public class SceneAnimationActivity extends AppCompatActivity{
             Scene scene = Scene.getSceneForLayout(container, layout, this);
             sceneList.add(scene);
         }
-        TransitionManager.go(sceneList.get(0));
 
         mGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (isSecond) {
-                    TransitionManager.go(sceneList.get(1));
+                    TransitionManager.go(sceneList.get(0), new CustomTransition());
                 } else {
-                    TransitionManager.go(sceneList.get(0));
+                    TransitionManager.go(sceneList.get(1), new CustomTransition());
                 }
                 isSecond = !isSecond;
             }

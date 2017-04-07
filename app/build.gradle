@@ -17,6 +17,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+    }
 }
 
 dependencies {
@@ -28,4 +31,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:24.1.0'
     compile 'com.synnapps:carouselview:0.0.10'
     testCompile 'junit:junit:4.12'
+    compile 'com.airbnb.android:lottie:2.0.0-beta3'
 }

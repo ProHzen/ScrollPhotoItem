@@ -25,12 +25,20 @@
             <!--</intent-filter>-->
         </activity>
         <meta-data android:name="QBSDKAppKey" android:value="HVhbersoo+LVjAMVCLQYhlq/"> </meta-data>
-        <activity android:name=".SceneAnimation.SceneAnimationActivity">
+        <activity android:name=".SceneAnimation.SlidingActivity">
+
+        </activity>
+
+        <activity android:name=".Lottie.LottieActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+
+        <activity android:name=".SvgDrawable.SvgActivity">
+
         </activity>
     </application>
 
