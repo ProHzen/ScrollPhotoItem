@@ -26,7 +26,7 @@ public class LottieActivity extends AppCompatActivity implements View.OnClickLis
     private LottieComposition mLottieComposition;
     private boolean isStart = true;
 
-    private Button mButton1, mButton2, mButton3, mButton4, mButton5;
+    private Button mButton1, mButton2, mButton3, mButton4, mButton5, mButton6;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,12 +40,14 @@ public class LottieActivity extends AppCompatActivity implements View.OnClickLis
         mButton3 = (Button) findViewById(R.id.btn_start3);
         mButton4 = (Button) findViewById(R.id.btn_start4);
         mButton5 = (Button) findViewById(R.id.btn_start5);
+        mButton6 = (Button) findViewById(R.id.btn_start6);
 
         mButton1.setOnClickListener(this);
         mButton2.setOnClickListener(this);
         mButton3.setOnClickListener(this);
         mButton4.setOnClickListener(this);
         mButton5.setOnClickListener(this);
+        mButton6.setOnClickListener(this);
 
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,23 +67,27 @@ public class LottieActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.btn_start1:
-                mLottieAnimationView.setAnimation("line_scan_code_to_search_question.json", LottieAnimationView.CacheStrategy.Weak);
+                mLottieAnimationView.setAnimation("tuku_end.json", LottieAnimationView.CacheStrategy.Weak);
                 mLottieAnimationView.playAnimation();
                 break;
             case R.id.btn_start2:
-                mLottieAnimationView.setAnimation("line_scan_code_to_word.json", LottieAnimationView.CacheStrategy.Weak);
+                mLottieAnimationView.setAnimation("tuku_star.json", LottieAnimationView.CacheStrategy.Weak);
                 mLottieAnimationView.playAnimation();
                 break;
             case R.id.btn_start3:
-                mLottieAnimationView.setAnimation("line_scan_word_to_code.json", LottieAnimationView.CacheStrategy.Weak);
+                mLottieAnimationView.setAnimation("button_end.json", LottieAnimationView.CacheStrategy.Weak);
                 mLottieAnimationView.playAnimation();
                 break;
             case R.id.btn_start4:
-                mLottieAnimationView.setAnimation("line_scan_word_to_search_question.json", LottieAnimationView.CacheStrategy.Weak);
+                mLottieAnimationView.setAnimation("button_star.json", LottieAnimationView.CacheStrategy.Weak);
                 mLottieAnimationView.playAnimation();
                 break;
             case R.id.btn_start5:
-                mLottieAnimationView.setAnimation("line_search_question.json", LottieAnimationView.CacheStrategy.Weak);
+                mLottieAnimationView.setAnimation("camera_camera_dago.json", LottieAnimationView.CacheStrategy.Weak);
+                mLottieAnimationView.playAnimation();
+                break;
+            case R.id.btn_start6:
+                mLottieAnimationView.setAnimation("camera_dago_camera.json", LottieAnimationView.CacheStrategy.Weak);
                 mLottieAnimationView.playAnimation();
                 break;
             default:
