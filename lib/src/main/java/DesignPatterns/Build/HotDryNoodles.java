@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns.Build;
 
 /**
  * Desc:   建造者模式之热干面

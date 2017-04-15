@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns.Build;
 
 /**
  * Desc:
@@ -15,7 +15,6 @@ public class XiaoGuang {
 
         HotDryNoodles noodlesB = new HotDryNoodles(true, false, false, true);
         System.out.println("Customer A wants: " + noodlesB);
-
 
         HotDryNoodlesWithBuilder noodlesWithBuilderA = new HotDryNoodlesWithBuilder.Builder()
                 .withChili()
