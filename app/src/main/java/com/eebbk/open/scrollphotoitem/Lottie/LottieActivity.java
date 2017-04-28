@@ -1,9 +1,11 @@
 package com.eebbk.open.scrollphotoitem.Lottie;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -31,6 +33,7 @@ public class LottieActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i("ysz", " onCreate ");
         setContentView(R.layout.activity_lottie_layout);
 
         mLottieAnimationView = (LottieAnimationView) findViewById(R.id.animation_view);
@@ -93,5 +96,11 @@ public class LottieActivity extends AppCompatActivity implements View.OnClickLis
             default:
                 break;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i("ysz", " onDestroy ");
     }
 }
