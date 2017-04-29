@@ -1,24 +1,22 @@
-package LOLDesignPatterns.AbstractBuilder;
-
-import LOLDesignPatterns.AbstractBuilder.Hero6300;
+package LOLDesignPatterns.Builder;
 
 /**
  * Desc:
  * Author: YangShangZhen
- * Time:   2017/4/28 8:25
+ * Time:   2017/4/27 9:24
  * Email:  369013520@qq.com
  */
 
-public class Syndra extends Hero6300 {
+public class Akali extends Hero3500 {
 
     @Override
     public String name() {
-        return "辛德拉";
+        return "阿卡丽";
     }
 
     @Override
     public String attributes() {
-        return "远程法师";
+        return "近战法师";
     }
 
     @Override

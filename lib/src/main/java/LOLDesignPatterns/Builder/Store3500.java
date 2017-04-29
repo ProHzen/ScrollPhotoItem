@@ -1,19 +1,17 @@
-package LOLDesignPatterns.AbstractBuilder;
-
-import LOLDesignPatterns.AbstractBuilder.Store;
+package LOLDesignPatterns.Builder;
 
 /**
  * Desc:
  * Author: YangShangZhen
- * Time:   2017/4/28 8:24
+ * Time:   2017/4/27 9:19
  * Email:  369013520@qq.com
  */
 
-public class Store6300 implements Store {
+public class Store3500 implements Store {
 
     @Override
     public int price() {
-        return 6300;
+        return 3500;
     }
 
     @Override

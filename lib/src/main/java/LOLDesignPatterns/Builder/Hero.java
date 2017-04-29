@@ -1,4 +1,4 @@
-package LOLDesignPatterns.AbstractBuilder;
+package LOLDesignPatterns.Builder;
 
 /**
  * Desc:

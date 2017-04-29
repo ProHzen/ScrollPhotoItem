@@ -1,6 +1,4 @@
-package LOLDesignPatterns.AbstractBuilder;
-
-import LOLDesignPatterns.AbstractBuilder.Akali;
+package LOLDesignPatterns.Builder;
 
 /**
  * Desc:

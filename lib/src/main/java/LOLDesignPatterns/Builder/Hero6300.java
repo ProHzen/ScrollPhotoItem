@@ -1,24 +1,19 @@
-package LOLDesignPatterns.AbstractBuilder;
-
-import LOLDesignPatterns.AbstractBuilder.Hero;
-import LOLDesignPatterns.AbstractBuilder.Store;
-import LOLDesignPatterns.AbstractBuilder.Store3500;
+package LOLDesignPatterns.Builder;
 
 /**
  * Desc:
  * Author: YangShangZhen
- * Time:   2017/4/28 8:33
+ * Time:   2017/4/28 8:34
  * Email:  369013520@qq.com
  */
 
-public abstract class Hero3500 implements Hero {
+public abstract class Hero6300 implements Hero {
 
     @Override
     public Store heroPrice() {
-        return new Store3500();
+        return new Store6300();
     }
 
-    @Override
     public abstract String name();
 
     @Override

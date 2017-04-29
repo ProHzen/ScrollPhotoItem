@@ -1,4 +1,4 @@
-package LOLDesignPatterns.AbstractBuilder;
+package LOLDesignPatterns.Builder;
 
 import java.util.ArrayList;
 import java.util.List;
