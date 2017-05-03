@@ -9,6 +9,9 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <permission android:name="com.eebbk.open.scrollphotoitem.permission.ACCESS_BOOK_SERVICE"
+        android:protectionLevel="normal"/>
+    <uses-permission android:name="com.eebbk.open.scrollphotoitem.permission.ACCESS_BOOK_SERVICE"/>
     <application
         android:name=".IPC.MyApplication"
         android:allowBackup="true"
@@ -56,7 +59,7 @@
             android:label="@string/app_name"
             android:process="com.eebbk.open.remote"></activity>
 
-        <activity android:name=".IPC.NewBookManagerActivity">
+        <activity android:name=".IPC.Provider.ProviderActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -68,6 +71,14 @@
             android:process=":remote"/>
         <service android:name=".IPC.BookManagerService"
             android:process=":remote"/>
+
+        <provider
+            android:authorities="com.eebbk.open.scrollphotoitem.book.provider"
+            android:name="com.eebbk.open.scrollphotoitem.IPC.Provider.BookProvider"
+            android:permission="com.eebbk.PROVIDER"
+            android:process=":remote">
+
+        </provider>
     </application>
 
 </manifest>

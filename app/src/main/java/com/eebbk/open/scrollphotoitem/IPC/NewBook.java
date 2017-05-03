@@ -12,8 +12,8 @@ import android.os.Parcelable;
 
 public class NewBook implements Parcelable{
 
-    private int bookId;
-    private String bookName;
+    public int bookId;
+    public String bookName;
 
     public NewBook(int bookId, String bookName) {
         this.bookId = bookId;
@@ -36,6 +36,10 @@ public class NewBook implements Parcelable{
             return new NewBook[size];
         }
     };
+
+    public NewBook() {
+
+    }
 
     @Override
     public int describeContents() {

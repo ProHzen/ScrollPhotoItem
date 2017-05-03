@@ -12,6 +12,7 @@ import android.os.RemoteException;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 
 import com.eebbk.open.scrollphotoitem.R;
 
@@ -49,13 +50,18 @@ public class NewBookManagerActivity extends AppCompatActivity {
         public void onServiceConnected(ComponentName name, IBinder service) {
             newBookManager = NewBookManager.Stub.asInterface(service);
             try {
+                service.linkToDeath(mDeathRecipient, 0);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+            try {
                 List<NewBook> newBookList = newBookManager.getNewBook();
-                Log.i(TAG, "query book list, list type:" + newBookList.getClass().getCanonicalName());
-                Log.i(TAG, "query book list: " + newBookList.toString());
+//                Log.i(TAG, "query book list, list type:" + newBookList.getClass().getCanonicalName());
+//                Log.i(TAG, "query book list: " + newBookList.toString());
                 NewBook newBook = new NewBook(3, "安卓开发艺术探索");
                 newBookManager.addNewBook(newBook);
                 List<NewBook> newBookList1 = newBookManager.getNewBook();
-                Log.i(TAG, "query book newBookList1: " + newBookList1.toString());
+//                Log.i(TAG, "query book newBookList1: " + newBookList1.toString());
                 newBookManager.registerListener(mNewBookArrivedListener);
             } catch (RemoteException e) {
                 e.printStackTrace();
@@ -65,6 +71,7 @@ public class NewBookManagerActivity extends AppCompatActivity {
         @Override
         public void onServiceDisconnected(ComponentName name) {
             newBookManager = null;
+            Log.i(TAG, " onServiceDisconnected process name = " + IPCUtils.getProcessName(NewBookManagerActivity.this));
             Log.e(TAG, "binder died");
         }
     };
@@ -82,6 +89,16 @@ public class NewBookManagerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ipc_first);
         Intent intent = new Intent(this, BookManagerService.class);
         bindService(intent, mServiceConnection, Context.BIND_AUTO_CREATE);
+        findViewById(R.id.btn_first).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    newBookManager.getNewBook();
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     @Override
@@ -97,4 +114,18 @@ public class NewBookManagerActivity extends AppCompatActivity {
         }
         unbindService(mServiceConnection);
     }
+
+    private IBinder.DeathRecipient mDeathRecipient = new IBinder.DeathRecipient() {
+        @Override
+        public void binderDied() {
+            Log.i(TAG, " binderDied process name = " + IPCUtils.getProcessName(NewBookManagerActivity.this));
+            if (newBookManager == null) {
+                return;
+            }
+            newBookManager.asBinder().unlinkToDeath(mDeathRecipient, 0);
+            newBookManager = null;
+            Intent intent = new Intent(NewBookManagerActivity.this, BookManagerService.class);
+            bindService(intent, mServiceConnection, Context.BIND_AUTO_CREATE);
+        }
+    };
 }
