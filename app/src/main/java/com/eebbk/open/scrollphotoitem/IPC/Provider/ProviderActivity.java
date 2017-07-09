@@ -3,6 +3,8 @@ package com.eebbk.open.scrollphotoitem.IPC.Provider;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,6 +14,8 @@ import com.eebbk.open.scrollphotoitem.IPC.Book;
 import com.eebbk.open.scrollphotoitem.IPC.NewBook;
 import com.eebbk.open.scrollphotoitem.IPC.User;
 import com.eebbk.open.scrollphotoitem.R;
+
+import java.util.List;
 
 /**
  * Desc:

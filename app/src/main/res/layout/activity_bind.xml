@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<data>-->
+        <!--<import type="String"/>-->
+        <!--<import type="android.graphics.Bitmap"/>-->
+        <!--<import type="java.util.List"/>-->
+        <!--<import type="java.util.ArrayList"/>-->
+        <!--<import type="java.util.HashMap"/>-->
+        <!--<import type="com.eebbk.open.scrollphotoitem.BindingUtil.Student"/>-->
+
+        <!--<variable-->
+            <!--name="stu"-->
+            <!--type="Student"/>-->
+        <!---->
+        <!--<variable-->
+            <!--name="isGirlFriend"-->
+            <!--type="boolean"/>-->
+
+        <!--<variable-->
+            <!--name="age"-->
+            <!--type="int"/>-->
+        <!---->
+        <!--<variable-->
+            <!--name="list"-->
+            <!--type="ArrayList&lt;String"/>-->
+
+        <!--<variable-->
+            <!--name="map"-->
+            <!--type="HashMap"/>-->
+
+        <!--<variable-->
+            <!--name="array"-->
+            <!--type="String[]"/>-->
+
+        <!--<variable-->
+            <!--name="listKey"-->
+            <!--type="int"/>-->
+
+        <!--<variable-->
+            <!--name="mapKey"-->
+            <!--type="int"/>-->
+
+        <!--<variable-->
+            <!--name="arrayKey"-->
+            <!--type="int"/>-->
+    <!--</data>-->
+
+    <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@{stu.name}"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@{stu.address}"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@{stu.isGirlFriend}"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@{String.valueOf(age)}"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@{list[listKey]}"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@{map[mapKey]}"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@{array[arrayKey]}"/>-->
+    <!--</LinearLayout>-->
+
+</layout>
