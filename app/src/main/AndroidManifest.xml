@@ -38,7 +38,11 @@
         </activity>
 
         <activity android:name=".Lottie.LottieActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
 
         <activity android:name=".SvgDrawable.SvgActivity">
@@ -74,6 +78,14 @@
         </activity>
 
         <activity android:name=".RxJava.RxJavaActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".VideoPlayer.VideoPlayActivity"
+                  android:configChanges="orientation|screenSize|keyboardHidden"
+                  android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>

@@ -43,6 +43,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -66,4 +69,9 @@ dependencies {
     compile 'com.ablanco.zoomy:zoomy:1.0.0'
 
     compile 'com.github.amlcurran.showcaseview:library:5.4.3'
+
+//    compile 'fm.jiecao:jiecaovideoplayer:5.7'
+
+
+    compile project(path: ':jcvideoplayer-lib')
 }

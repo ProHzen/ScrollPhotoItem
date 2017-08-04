@@ -37,6 +37,7 @@ public class LottieActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_lottie_layout);
 
         mLottieAnimationView = (LottieAnimationView) findViewById(R.id.animation_view);
+        mLottieAnimationView.setTag(1);
         mButton = (Button) findViewById(R.id.btn_start);
         mButton1 = (Button) findViewById(R.id.btn_start1);
         mButton2 = (Button) findViewById(R.id.btn_start2);
@@ -70,11 +71,19 @@ public class LottieActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.btn_start1:
-                mLottieAnimationView.setAnimation("tuku_end.json", LottieAnimationView.CacheStrategy.Weak);
-                mLottieAnimationView.playAnimation();
+                if ((int)mLottieAnimationView.getTag() == 1) {
+                    mLottieAnimationView.setTag(2);
+                    mLottieAnimationView.setAnimation("tab/word_press.json", LottieAnimationView.CacheStrategy.Weak);
+                    mLottieAnimationView.playAnimation();
+                } else {
+                    mLottieAnimationView.setTag(1);
+                    mLottieAnimationView.setAnimation("tab/word_normal.json", LottieAnimationView.CacheStrategy.Weak);
+                    mLottieAnimationView.playAnimation();
+                }
+
                 break;
             case R.id.btn_start2:
-                mLottieAnimationView.setAnimation("tuku_star.json", LottieAnimationView.CacheStrategy.Weak);
+                mLottieAnimationView.setAnimation("tab/word_normal.json", LottieAnimationView.CacheStrategy.Weak);
                 mLottieAnimationView.playAnimation();
                 break;
             case R.id.btn_start3:
