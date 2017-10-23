@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/collection_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="10dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <com.tmall.ultraviewpager.UltraViewPager
+        android:layout_below="@id/collection_recycler_view"
+        android:id="@+id/ula_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@android:color/black"/>
+
+</RelativeLayout>

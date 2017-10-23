@@ -91,6 +91,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ListViewPager.ListViewPagerActivity"
+                  android:configChanges="orientation|screenSize|keyboardHidden"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+
         <service android:name=".IPC.messenger.MessengerService"
             android:process=":remote"/>
         <service android:name=".IPC.BookManagerService"

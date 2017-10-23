@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.airbnb.lottie.LottieComposition;
 import com.eebbk.open.scrollphotoitem.R;
 
 /**
@@ -25,7 +24,6 @@ public class LottieActivity extends AppCompatActivity implements View.OnClickLis
 
     private LottieAnimationView mLottieAnimationView;
     private Button mButton;
-    private LottieComposition mLottieComposition;
     private boolean isStart = true;
 
     private Button mButton1, mButton2, mButton3, mButton4, mButton5, mButton6;
@@ -53,17 +51,14 @@ public class LottieActivity extends AppCompatActivity implements View.OnClickLis
         mButton5.setOnClickListener(this);
         mButton6.setOnClickListener(this);
 
-        mButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (isStart) {
-                    mLottieAnimationView.setAnimation("camera_downd.json", LottieAnimationView.CacheStrategy.Weak);
-                } else {
-                    mLottieAnimationView.setAnimation("camera_end.json", LottieAnimationView.CacheStrategy.Weak);
-                }
-                isStart = !isStart;
-                mLottieAnimationView.playAnimation();
+        mButton.setOnClickListener(v -> {
+            if (isStart) {
+                mLottieAnimationView.setAnimation("camera_downd.json", LottieAnimationView.CacheStrategy.Weak);
+            } else {
+                mLottieAnimationView.setAnimation("camera_end.json", LottieAnimationView.CacheStrategy.Weak);
             }
+            isStart = !isStart;
+            mLottieAnimationView.playAnimation();
         });
     }
 
@@ -73,11 +68,11 @@ public class LottieActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.btn_start1:
                 if ((int)mLottieAnimationView.getTag() == 1) {
                     mLottieAnimationView.setTag(2);
-                    mLottieAnimationView.setAnimation("tab/word_press.json", LottieAnimationView.CacheStrategy.Weak);
+                    mLottieAnimationView.setAnimation("tab/good_start.json", LottieAnimationView.CacheStrategy.Weak);
                     mLottieAnimationView.playAnimation();
                 } else {
                     mLottieAnimationView.setTag(1);
-                    mLottieAnimationView.setAnimation("tab/word_normal.json", LottieAnimationView.CacheStrategy.Weak);
+                    mLottieAnimationView.setAnimation("tab/good_cancel.json", LottieAnimationView.CacheStrategy.Weak);
                     mLottieAnimationView.playAnimation();
                 }
 
