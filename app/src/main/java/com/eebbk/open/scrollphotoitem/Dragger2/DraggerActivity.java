@@ -27,10 +27,10 @@ public class DraggerActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ipc_first);
-        mActivityComponent = DaggerActivityComponent.builder().activityModule(new ActivityModule()).build();
-        ContainerComponent containerComponent = DaggerContainerComponent.builder().
-                activityComponent(mActivityComponent).containerModule(new ContainerModule()).build();
-        containerComponent.inject(this);
-        ((TextView)findViewById(R.id.tv_msg)).setText("age = " + mUserModel.getAge() + " name = " + mUserModel.getName());
+//        mActivityComponent = DaggerActivityComponent.builder().activityModule(new ActivityModule()).build();
+//        ContainerComponent containerComponent = DaggerContainerComponent.builder().
+//                activityComponent(mActivityComponent).containerModule(new ContainerModule()).build();
+//        containerComponent.inject(this);
+//        ((TextView)findViewById(R.id.tv_msg)).setText("age = " + mUserModel.getAge() + " name = " + mUserModel.getName());
     }
 }

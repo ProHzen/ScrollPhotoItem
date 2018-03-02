@@ -19,6 +19,9 @@ public class User extends RealmObject {
     @PrimaryKey
     private String id;
 
+    public User() {
+    }
+
     public User(String john) {
 
     }

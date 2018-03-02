@@ -37,8 +37,8 @@ public class RxJavaActivity extends AppCompatActivity {
 
     private void initData() {
         initOneFragment();
-        initTwoFragment();
-        initThreeFragment();
+//        initTwoFragment();
+//        initThreeFragment();
     }
 
     private void initOneFragment() {

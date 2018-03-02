@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="mode_edit_select_textcolor">#ffb900</color>
+    <color name="rippelColor">#FFFFFF</color>
+    <color name="color_363636">#363636</color>
+    <color name="color_0AD768">#0ad768</color>
 </resources>

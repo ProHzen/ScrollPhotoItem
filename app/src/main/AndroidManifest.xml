@@ -99,6 +99,36 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ConstraintLayout.ConstraintLayoutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".KotlinDemo.KotlinActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".expandablelayout.ExpandableActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".expandablelayout.multitype.OneDataToManyActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".RippleView.RippleViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+
         <service android:name=".IPC.messenger.MessengerService"
             android:process=":remote"/>
         <service android:name=".IPC.BookManagerService"

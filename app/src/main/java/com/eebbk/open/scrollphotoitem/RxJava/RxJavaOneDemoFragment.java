@@ -1,6 +1,7 @@
 package com.eebbk.open.scrollphotoitem.RxJava;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -10,14 +11,16 @@ import android.view.ViewGroup;
 
 import com.eebbk.open.scrollphotoitem.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
-import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
+import io.reactivex.functions.Function;
 
 
 /**
@@ -114,5 +117,25 @@ public class RxJavaOneDemoFragment extends Fragment {
 
         });
 
+        List<String> strings = new ArrayList<>();
+        strings.add("111");
+        strings.add("222");
+        strings.add("333");
+        strings.add("444");
+        Observable.just(strings).flatMap(new Function<List<String>, ObservableSource<String>>() {
+            @Override
+            public ObservableSource<String> apply(List<String> strings) throws Exception {
+                return Observable.fromIterable(strings);
+            }
+        }).subscribe(new Consumer<String>() {
+            @Override
+            public void accept(String s) throws Exception {
+                Log.i("flatMap", "s = " + s);
+            }
+        });
+
+        Observable.just(strings)
+                .flatMap(Observable::fromIterable)
+                .subscribe(s -> Log.i("flatMap", "s = " + s));
     }
 }

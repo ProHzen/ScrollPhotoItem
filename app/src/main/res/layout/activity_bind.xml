@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!--<data>-->
+    <!--<Artistdata>&ndash;&gt;-->
         <!--<import type="String"/>-->
         <!--<import type="android.graphics.Bitmap"/>-->
         <!--<import type="java.util.List"/>-->
@@ -44,7 +44,7 @@
         <!--<variable-->
             <!--name="arrayKey"-->
             <!--type="int"/>-->
-    <!--</data>-->
+    <!--<!Artistdata>&ndash;&gt;-->
 
     <!--<LinearLayout-->
         <!--android:orientation="vertical"-->

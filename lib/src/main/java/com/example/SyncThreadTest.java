@@ -2,7 +2,7 @@ package com.example;
 
 public class SyncThreadTest {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         final SynchronizedOtherBank bank = new SynchronizedOtherBank();
         Thread tAdd = new Thread(new Runnable() {

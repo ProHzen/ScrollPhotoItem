@@ -68,11 +68,11 @@ public class LottieActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.btn_start1:
                 if ((int)mLottieAnimationView.getTag() == 1) {
                     mLottieAnimationView.setTag(2);
-                    mLottieAnimationView.setAnimation("tab/good_start.json", LottieAnimationView.CacheStrategy.Weak);
+                    mLottieAnimationView.setAnimation("tab/point.json", LottieAnimationView.CacheStrategy.Weak);
                     mLottieAnimationView.playAnimation();
                 } else {
                     mLottieAnimationView.setTag(1);
-                    mLottieAnimationView.setAnimation("tab/good_cancel.json", LottieAnimationView.CacheStrategy.Weak);
+                    mLottieAnimationView.setAnimation("tab/point.json", LottieAnimationView.CacheStrategy.Weak);
                     mLottieAnimationView.playAnimation();
                 }
 
@@ -82,11 +82,11 @@ public class LottieActivity extends AppCompatActivity implements View.OnClickLis
                 mLottieAnimationView.playAnimation();
                 break;
             case R.id.btn_start3:
-                mLottieAnimationView.setAnimation("button_end.json", LottieAnimationView.CacheStrategy.Weak);
+                mLottieAnimationView.setAnimation("chinese_word.json", LottieAnimationView.CacheStrategy.Weak);
                 mLottieAnimationView.playAnimation();
                 break;
             case R.id.btn_start4:
-                mLottieAnimationView.setAnimation("button_star.json", LottieAnimationView.CacheStrategy.Weak);
+                mLottieAnimationView.setAnimation("chinese_single_word.json", LottieAnimationView.CacheStrategy.Weak);
                 mLottieAnimationView.playAnimation();
                 break;
             case R.id.btn_start5:

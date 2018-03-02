@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="部首"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30px"
+        android:text="笔画"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tv1"/>
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30px"
+        android:text="结构"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tv2"/>
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30px"
+        android:text="笔顺"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tv3"/>
+
+    <ImageView
+        android:id="@+id/iv_show_bishun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_50px"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toRightOf="@id/tv4"
+        app:layout_constraintTop_toTopOf="@id/tv4"/>
+
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30px"
+        android:text="形近字及组词"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/iv_show_bishun"/>
+
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30px"
+        android:text="易错提示"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tv5"/>
+
+</android.support.constraint.ConstraintLayout>
